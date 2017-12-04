@@ -34,6 +34,7 @@ Ubuntu's performance on two images
 ![Ubuntu](https://github.com/Yannnnnnnnnnnn/cpu_cuda_compare/blob/master/Ubuntu.png)
 
 CPU and openMP
+
 ![CPU](https://github.com/Yannnnnnnnnnnn/cpu_cuda_compare/blob/master/Ubuntu%20CPU%20IMAGE%20A.png)
 
 DATA
