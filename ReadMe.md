@@ -3,8 +3,9 @@ Compare the time used for convolution
 TASK
 ----
 Input a image named "test.jpg" and do convolution with a 3×3 kernel like this:
-| -1 -1 -1 |
-| -1  8 -1 |
+
+| -1 -1 -1 |  
+| -1  8 -1 |  
 | -1 -1 -1 |
 
 COMPARE
@@ -29,7 +30,11 @@ For more information,please refer to the data_and_figure.xlsx
 
 Some Result Figure
 ---
+Ubuntu's performance on two images
+![Ubuntu](https://github.com/Yannnnnnnnnnnn/cpu_cuda_compare/blob/master/Ubuntu.png)
 
+CPU and openMP
+![CPU](https://github.com/Yannnnnnnnnnnn/cpu_cuda_compare/blob/master/Ubuntu%20CPU%20IMAGE%20A.png)
 
 DATA
 ----
