@@ -28,7 +28,7 @@ __global__ void convolution_kernel(unsigned char* in_image,short *out_image,int 
         return;
     }
 
-    int pos = y*blockDim.x*gridDim.x+x;
+    int pos = y*width+x;
 
     if(x==0||y==0||(x==width-1)||(y==height-1))
     {
@@ -116,8 +116,9 @@ int main()
         exit( EXIT_FAILURE );
     }
 
-    dim3 grid((in_image.cols+1)/32,(in_image.rows+1)/32);
     dim3 threads(32,32);
+    dim3 grid(max(in_image.cols/threads.x,1),max(in_image.rows/32,1));
+    
     convolution_kernel<<<grid,threads>>>(dev_in_image,dev_out_image,in_image.cols,in_image.rows);
 
     //copy out
