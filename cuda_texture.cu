@@ -134,8 +134,8 @@ int main()
 
 
 
-    dim3 threads(32,32);
-    dim3 grid(max(in_image.cols/threads.x,1),max(in_image.rows/32,1));
+    dim3 threads(16,16);
+    dim3 grid(max((in_image.cols+threads.x-1)/threads.x,1),max((in_image.rows+threads.y-1)/threads.y,1));
     convolution_kernel<<<grid,threads>>>(dev_out_image,dev_H,in_image.cols,in_image.rows);
 
     //copy out
